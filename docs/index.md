@@ -1,6 +1,7 @@
-Homepage: [https://Kenn3o3.github.io](https://Kenn3o3.github.io)
 
 # Learning Competitive Programming
+
+My Homepage: [https://Kenn3o3.github.io](https://Kenn3o3.github.io)
 
 This blog is used to share my learning. 
 
