@@ -1,0 +1,11 @@
+site_name: Competitive Programming
+site_url: https://Kenn3o3.github.io/cp/  # Update this if deploying to GitHub Pages
+theme:
+  name: material  # Change to 'mkdocs' if not using Material theme
+nav:
+  - Home: index.md
+  - Algebra:
+      - fundamental: algebra/fundamental.md
+markdown_extensions:
+  - toc:
+      permalink: true
