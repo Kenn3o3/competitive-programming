@@ -2,6 +2,10 @@ site_name: Competitive Programming
 site_url: https://Kenn3o3.github.io/cp/  # Update this if deploying to GitHub Pages
 theme:
   name: material  # Change to 'mkdocs' if not using Material theme
+  logo: assets/favicon.png
+  favicon: assets/favicon.png
+  palette:
+    primary: blue
 nav:
   - Home: index.md
   - Algebra:
@@ -9,3 +13,6 @@ nav:
 markdown_extensions:
   - toc:
       permalink: true
+extra_javascript:
+  - javascripts/mathjax_config.js  # Path to your MathJax configuration script
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
