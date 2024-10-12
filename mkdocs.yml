@@ -13,6 +13,9 @@ nav:
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 extra_javascript:
   - javascripts/mathjax_config.js  # Path to your MathJax configuration script
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js

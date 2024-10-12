@@ -26,11 +26,34 @@ long long binpow(long long a, long long b) {
 
 ## **Problems**
 
-1. Computer $x^n$ mod $m$ .
+1. **Computer $x^n$ mod $m$ .**
+
+    the modulo operator doesn't interfere with multiplications ( $a \cdot b \bmod m \equiv (a \bmod m) \cdot (b \bmod m) \pmod m$ ), we can directly use the same code, and just replace every multiplication with a modular multiplication.
+
+    **proof**:
+
+    - $a (\bmod n) \equiv \bar{a} \iff a = np + \bar{a}$
+    - $b (\bmod n) \equiv \bar{b} \iff b = nq + \bar{b}$
+    - $ab = n(npq + q\bar{a} + p\bar{b}) + \bar{a} \bar{b} \Rightarrow ab = \bar{a} \bar{b} (\bmod n)$
+
+    **code**:
+```cpp
+long long binpow(long long a, long long b, long long m) {
+    a %= m;
+    long long res = 1;
+    while (b > 0) {
+        if (b & 1)
+            res = res * a % m;
+        a = a * a % m;
+        b >>= 1;
+    }
+    return res;
+}
+```
 
 2. Computer $n$ - th Fibonacci number $F_n$ .
 
-4. You are given a sequence of length  $n$ . Apply to it a given permutation  $k$  times .
+3. You are given a sequence of length  $n$ . Apply to it a given permutation  $k$  times .
 
 4. Given  $n$  points  $p_i$ , apply  $m$  transformations to each of these points. Each transformation can be a shift, a scaling or a rotation around a given axis by a given angle. There is also a "loop" operation which applies a given list of transformations  $k$  times ("loop" operations can be nested). You should apply all transformations faster than  $O(n \cdot length)$ , where  $length$  is the total number of transformations to be applied (after unrolling "loop" operations).
 
